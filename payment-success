@@ -2,34 +2,78 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Payment Successful</title>
+    <title>Payment Complete - SaysBot</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
             height: 100vh;
-            margin: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .container {
             text-align: center;
-            background: white;
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            max-width: 500px;
+            padding: 40px;
         }
-        h1 { color: #4CAF50; }
-        p { color: #666; margin: 20px 0; }
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 30px;
+            background: #238636;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: scale 0.5s ease;
+        }
+        @keyframes scale {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #58a6ff;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            color: #8b949e;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: #238636;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .button:hover {
+            background: #2ea043;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>✅ Payment Successful!</h1>
-        <p>Your payment has been processed successfully.</p>
-        <p>Please check your Discord DM for the license key.</p>
-        <p>You can close this page now.</p>
+        <div class="checkmark">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+        </div>
+        <h1>Payment Successful</h1>
+        <p>Your transaction has been completed successfully.</p>
+        <p>Your license key has been sent to your Discord DM.</p>
+        <p>Please check your direct messages.</p>
+        <a href="https://discord.com/app" class="button">Open Discord</a>
     </div>
 </body>
 </html>
